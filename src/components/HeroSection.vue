@@ -1,6 +1,6 @@
 <template>
   <section class="section hero">
-    <p class="eyebrow">Nicolas Forshee</p>
+    <p class="eyebrow">Nick Forshee</p>
     <h1>
       Full-Stack Engineer building scalable SaaS systems and developer tooling.
     </h1>
