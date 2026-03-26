@@ -8,7 +8,6 @@
       </p>
 
       <div class="contact-links">
-        <a href="mailto:nwforshee@gmail.com">nwforshee@gmail.com</a>
         <a
           href="https://www.linkedin.com/in/nick-forshee-9233213b9"
           target="_blank"
@@ -21,6 +20,7 @@
           rel="noreferrer"
           >GitHub</a
         >
+        <a href="mailto:nwforshee@gmail.com">Email Me</a>
       </div>
     </div>
   </section>
