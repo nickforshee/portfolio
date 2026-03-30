@@ -54,13 +54,27 @@ a:hover {
   padding-bottom: 3rem;
 }
 
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.75rem;
+}
+
+.profile-picture {
+  width: 128px;
+  height: 128px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
 .eyebrow {
   margin: 0 0 1rem;
   color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-size: 0.8rem;
-  font-weight: 700;
 }
 
 h1 {
@@ -207,5 +221,17 @@ h3 {
 
   .hero {
     padding-top: 2rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-picture {
+    width: 96px;
+    height: 96px;
   }
 }

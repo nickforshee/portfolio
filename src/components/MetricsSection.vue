@@ -2,18 +2,14 @@
   <section class="section">
     <h2>Impact</h2>
     <div class="metrics-grid">
-      <div class="metric-card">
-        <span class="metric-value">40+</span>
-        <span class="metric-label">Enterprise customers</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">60,000+</span>
-        <span class="metric-label">Users supported</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">10x+</span>
-        <span class="metric-label">Efficiency gains</span>
+      <div v-for="metric in metrics" :key="metric.label" class="metric-card">
+        <span class="metric-value">{{ metric.value }}</span>
+        <span class="metric-label">{{ metric.label }}</span>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { metrics } from "../data/metrics";
+</script>

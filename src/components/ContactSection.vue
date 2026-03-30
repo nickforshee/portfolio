@@ -9,19 +9,19 @@
 
       <div class="contact-links">
         <a
-          href="https://www.linkedin.com/in/nick-forshee-9233213b9"
+          v-for="link in contactLinks"
+          :key="link.label"
+          :href="link.href"
           target="_blank"
           rel="noreferrer"
-          >LinkedIn</a
         >
-        <a
-          href="https://github.com/nickforshee"
-          target="_blank"
-          rel="noreferrer"
-          >GitHub</a
-        >
-        <a href="mailto:nwforshee@gmail.com">Email Me</a>
+          {{ link.label }}
+        </a>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { contactLinks } from "../data/links";
+</script>
