@@ -9,16 +9,18 @@
         class="project-card"
         :class="{ muted: project.muted }"
       >
-        <div class="project-header">
-          <h3>{{ project.title }}</h3>
-          <span class="project-tag">{{ project.tag }}</span>
+        <div>
+          <div class="project-header">
+            <h3>{{ project.title }}</h3>
+            <span class="project-tag">{{ project.tag }}</span>
+          </div>
+
+          <p>{{ project.description }}</p>
+
+          <ul v-if="project.bullets?.length" class="project-list">
+            <li v-for="bullet in project.bullets" :key="bullet">{{ bullet }}</li>
+          </ul>
         </div>
-
-        <p>{{ project.description }}</p>
-
-        <ul v-if="project.bullets?.length" class="project-list">
-          <li v-for="bullet in project.bullets" :key="bullet">{{ bullet }}</li>
-        </ul>
 
         <div v-if="project.links?.length" class="project-links">
           <a
@@ -40,3 +42,23 @@
 <script setup lang="ts">
 import { projects } from "../data/projects";
 </script>
+
+<style scoped>
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.project-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.project-links .button {
+  min-width: 120px;
+  justify-content: center;
+}
+</style>

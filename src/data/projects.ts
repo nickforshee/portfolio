@@ -35,10 +35,31 @@ export const projects: Project[] = [
     ],
   },
   {
+    title: "Git Branch Pruner",
+    tag: "Developer tooling",
+    description:
+      "Bash scripts that mimic PHPStorm's branch cleanup flow by identifying stale local branches and safely pruning them with dry-run, delete, and force flags.",
+    bullets: [
+      "Fetches remotes, analyzes branch divergences, and highlights branches that no longer exist upstream before deleting anything",
+      "Dry run is the default experience, with safety checks for the current branch, confirmation prompts, and optional --force overrides",
+      "Installer script copies binaries to ~/git-branch-pruner, makes them executable, and wires up PATH/alias helpers for Bash and Zsh",
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/nickforshee/git-branch-pruner",
+      },
+      {
+        label: "Docs & Install",
+        href: "https://github.com/nickforshee/git-branch-pruner#readme",
+      },
+    ],
+  },
+  {
     title: "More Projects Coming",
     tag: "In progress",
     description:
-      "I’m currently building out additional portfolio projects focused on workflow systems, developer tooling, and AI-integrated applications.",
+      "I'm currently building out additional portfolio projects focused on workflow systems, developer tooling, and AI-integrated applications.",
     muted: true,
   },
 ];
