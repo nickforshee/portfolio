@@ -19,7 +19,7 @@ export const heroLinks: ActionLink[] = [
   },
   {
     label: "Email Me",
-    href: "mailto:nwforshee@gmail.com",
+    href: "mailto:longs-musics.4p@icloud.com",
   },
 ];
 
@@ -36,6 +36,6 @@ export const contactLinks: ActionLink[] = [
   },
   {
     label: "Email",
-    href: "mailto:nwforshee@gmail.com",
+    href: "mailto:longs-musics.4p@icloud.com",
   },
 ];
