@@ -12,24 +12,12 @@
           reliable at scale.
         </p>
       </div>
-      <img
-        src="https://picsum.photos/400"
-        alt="Nick Forshee profile"
-        class="profile-picture"
-        loading="lazy"
-        decoding="async"
-      />
+      <img :src="profilePic" alt="Nick Forshee profile" class="profile-picture" loading="lazy" decoding="async" />
     </div>
 
     <div class="hero-actions">
-      <a
-        v-for="link in heroLinks"
-        :key="link.label"
-        :href="link.href"
-        :class="['button', link.variant === 'primary' ? 'primary' : '']"
-        :target="link.target"
-        rel="noreferrer"
-      >
+      <a v-for="link in heroLinks" :key="link.label" :href="link.href"
+        :class="['button', link.variant === 'primary' ? 'primary' : '']" :target="link.target" rel="noreferrer">
         {{ link.label }}
       </a>
     </div>
@@ -38,4 +26,5 @@
 
 <script setup lang="ts">
 import { heroLinks } from "../data/links";
+import profilePic from "../assets/hero_profile_picture.JPEG";
 </script>

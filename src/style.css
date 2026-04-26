@@ -62,12 +62,13 @@ a:hover {
 }
 
 .profile-picture {
-  width: 128px;
-  height: 128px;
+  width: 320px;
+  height: 320px;
   border-radius: 999px;
   object-fit: cover;
   border: 2px solid var(--border);
   box-shadow: var(--shadow);
+  flex-shrink: 0;
 }
 
 .eyebrow {
@@ -79,13 +80,13 @@ a:hover {
 
 h1 {
   margin: 0;
-  font-size: clamp(2.4rem, 6vw, 4.5rem);
-  line-height: 1.05;
-  max-width: 12ch;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.1;
+  max-width: 18ch;
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 0 0 1rem;
 }
 
@@ -128,6 +129,12 @@ h3 {
   color: var(--text);
   font-weight: 600;
   box-shadow: var(--shadow);
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .button.primary {
@@ -222,16 +229,40 @@ h3 {
   .hero {
     padding-top: 2rem;
   }
+
+  .lede {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 0.9rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .profile-picture {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 @media (max-width: 720px) {
   .hero-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+
+  h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
   }
 
   .profile-picture {
-    width: 96px;
-    height: 96px;
+    width: 120px;
+    height: 120px;
   }
 }
