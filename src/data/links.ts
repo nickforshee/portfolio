@@ -23,7 +23,7 @@ export const heroLinks: ActionLink[] = [
   },
   {
     label: "Resume",
-    href: "../components/Forshee_Nicolas_Resume.html",
+    href: "/Forshee_Nicolas_Resume.html",
     target: "_blank"
   }
 ];

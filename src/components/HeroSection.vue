@@ -16,8 +16,12 @@
     </div>
 
     <div class="hero-actions">
+    <p>
+        I’m open to connecting about engineering roles, SaaS platforms,
+        developer tooling, and interesting technical problems.
+      </p>
       <a v-for="link in heroLinks" :key="link.label" :href="link.href"
-        :class="['button', link.variant === 'primary' ? 'primary' : '']" :target="link.target" rel="noreferrer">
+        :class="['button', link.variant === 'primary' ? 'primary' : '']" :target="link.target" :rel="link.target === '_blank' ? 'noreferrer' : undefined">
         {{ link.label }}
       </a>
     </div>
