@@ -22,7 +22,7 @@ export const heroLinks: ActionLink[] = [
     href: "mailto:longs-musics.4p@icloud.com",
   },
   {
-    label: "Resume",
+    label: "Résumé",
     href: "/Forshee_Nicolas_Resume.html",
     target: "_blank"
   }
