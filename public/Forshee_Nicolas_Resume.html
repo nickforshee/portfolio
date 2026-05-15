@@ -350,6 +350,69 @@
         padding-top: 0.18rem;
       }
     }
+    @media (max-width: 768px) {
+      body {
+        padding: 0;
+        background: var(--paper);
+      }
+
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 1.25rem;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+
+      h3 {
+        font-size: 1rem;
+      }
+
+      p,
+      li,
+      span {
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .header,
+      .section-header,
+      .job-header,
+      .two-column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+
+      .contact-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .experience-item,
+      .project-item {
+        padding-bottom: 1rem;
+      }
+
+      ul {
+        padding-left: 1.1rem;
+      }
+    }
   </style>
 </head>
 <body>
