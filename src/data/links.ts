@@ -21,6 +21,11 @@ export const heroLinks: ActionLink[] = [
     label: "Email Me",
     href: "mailto:longs-musics.4p@icloud.com",
   },
+  {
+    label: "Resume",
+    href: "../components/Forshee_Nicolas_Resume.html",
+    target: "_blank"
+  }
 ];
 
 export const contactLinks: ActionLink[] = [

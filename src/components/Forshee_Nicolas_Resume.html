@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nick Forshee Resume</title>
+  <style>
+    :root {
+      --page-width: 8.5in;
+      --page-height: 11in;
+      --ink: #1f2933;
+      --soft-ink: #4b5563;
+      --muted: #6b7280;
+      --line: #d7dce2;
+      --accent: #23415f;
+      --accent-soft: #eef3f8;
+      --paper: #ffffff;
+      --desk: #eceff3;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      background: var(--desk);
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font-family: "Aptos", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 10pt;
+      line-height: 1.33;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .page {
+      width: var(--page-width);
+      min-height: var(--page-height);
+      margin: 2rem auto;
+      padding: 0.44in 0.54in 0.48in;
+      background: var(--paper);
+      box-shadow: 0 1.25rem 3rem rgba(31, 41, 51, 0.18);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+      margin-bottom: 0.8rem;
+      padding-bottom: 0.65rem;
+      border-bottom: 2px solid var(--accent);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--accent);
+      font-family: "Aptos Display", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 22pt;
+      font-weight: 750;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      color: var(--soft-ink);
+      font-size: 9.4pt;
+      letter-spacing: 0.015em;
+    }
+
+    .contact a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    .section {
+      margin-top: 0.68rem;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      margin: 0 0 0.4rem;
+      color: var(--accent);
+      font-size: 9.2pt;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .section-title::before,
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      opacity: 0.65;
+    }
+
+    .section-title::before {
+      background: linear-gradient(to left, var(--accent), transparent);
+    }
+
+    .section-title::after {
+      background: linear-gradient(to right, var(--accent), transparent);
+    }
+
+    .section-title .diamond {
+      display: inline-grid;
+      place-items: center;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 7pt;
+      letter-spacing: 0;
+    }
+
+    .summary p {
+      margin: 0;
+      padding: 0.58rem 0.7rem;
+      border-left: 4px solid var(--accent);
+      background: var(--accent-soft);
+      color: var(--soft-ink);
+      font-size: 9.75pt;
+    }
+
+    p {
+      margin: 0 0 0.38rem;
+    }
+
+    .job {
+      margin-top: 0.58rem;
+      padding-top: 0.55rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .job:first-of-type {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .job-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 0.18rem;
+    }
+
+    .job-title {
+      color: var(--ink);
+      font-size: 10.35pt;
+      font-weight: 800;
+      line-height: 1.18;
+    }
+
+    .job-dates {
+      color: var(--muted);
+      font-size: 9.1pt;
+      font-weight: 650;
+      letter-spacing: 0.025em;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .job p {
+      color: var(--soft-ink);
+    }
+
+    .metrics-title {
+      margin-top: 0.5rem;
+      margin-bottom: 0.2rem;
+      padding: 0.28rem 0.48rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: 8.8pt;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    ul {
+      margin: 0.22rem 0 0.42rem 0.95rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.32rem;
+      padding-left: 0.12rem;
+      color: var(--soft-ink);
+    }
+
+    li::marker {
+      color: var(--accent);
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.38rem;
+    }
+
+    .detail-block {
+      display: grid;
+      grid-template-columns: 8.75rem 1fr;
+      gap: 0.65rem;
+      padding-top: 0.32rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .detail-block:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .subsection-title {
+      color: var(--accent);
+      font-size: 9.1pt;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .compact-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .compact-list li {
+      margin: 0 0 0.2rem;
+      padding: 0;
+    }
+
+    .compact-list li:last-child {
+      margin-bottom: 0;
+    }
+
+    @page {
+      size: letter portrait;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+      }
+
+      body {
+        font-size: 9.55pt;
+        line-height: 1.24;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .page {
+        width: 7.75in;
+        min-height: auto;
+        margin: 0 auto;
+        padding: 0.28in 0.34in 0.3in;
+        box-shadow: none;
+      }
+
+      header {
+        margin-bottom: 0.55rem;
+        padding-bottom: 0.45rem;
+      }
+
+      h1 {
+        font-size: 20pt;
+      }
+
+      .section {
+        margin-top: 0.48rem;
+      }
+
+      .section-title {
+        margin-bottom: 0.24rem;
+        font-size: 8.6pt;
+      }
+
+      .summary p {
+        padding: 0.42rem 0.55rem;
+        font-size: 9.2pt;
+      }
+
+      .job {
+        margin-top: 0.4rem;
+        padding-top: 0.38rem;
+      }
+
+      .job-header {
+        margin-bottom: 0.08rem;
+      }
+
+      .job-title {
+        font-size: 9.9pt;
+      }
+
+      .job-dates {
+        font-size: 8.5pt;
+      }
+
+      p {
+        margin-bottom: 0.22rem;
+      }
+
+      .metrics-title {
+        margin-top: 0.32rem;
+        margin-bottom: 0.12rem;
+        padding: 0.18rem 0.38rem;
+      }
+
+      ul {
+        margin: 0.12rem 0 0.24rem 0.85rem;
+      }
+
+      li {
+        margin-bottom: 0.12rem;
+      }
+
+      .details-grid {
+        gap: 0.18rem;
+      }
+
+      .detail-block {
+        padding-top: 0.18rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Nick Forshee</h1>
+      <div class="contact">Herriman UT 84096 | <a href="mailto:longs-musics.4p@icloud.com">longs-musics.4p@icloud.com</a> | 801.234.0506</div>
+    </header>
+
+    <section class="section summary" aria-labelledby="summary-title">
+      <h2 id="summary-title" class="section-title"><span class="diamond">⬥</span> Summary of Qualifications <span class="diamond">⬥</span></h2>
+      <p>Senior full-stack web developer with experience architecting scalable B2B SaaS systems, configurable workflow platforms, enterprise integrations, and operational tooling using Laravel, Vue.js, MySQL, DynamoDB, AWS, CI/CD, and Git/GitHub. Certified Airline Transport Pilot with a strong background in high-accountability operational environments, complex problem solving, and team collaboration. Technologically minded, adaptable, and focused on building reliable systems that improve operational efficiency and customer outcomes.</p>
+    </section>
+
+    <section class="section" aria-labelledby="experience-title">
+      <h2 id="experience-title" class="section-title"><span class="diamond">⬥</span> Experience and Selected Accomplishments <span class="diamond">⬥</span></h2>
+
+      <article class="job">
+        <div class="job-header">
+          <div class="job-title">Ascent Software Group (Jaro) – Senior Web Developer - Alpine, UT</div>
+          <div class="job-dates">January 2022 to Present</div>
+        </div>
+        <p>Developed and maintained complex enterprise application systems supporting B2B and SaaS operations. Architected proprietary internal and customer-facing solutions that improved operational efficiency, scalability, accuracy, and delivery speed in highly competitive and regulated environments. Designed configurable workflow and automation systems to support evolving customer requirements and operational growth. Implemented collaborative development process improvements across teams and stakeholders to strengthen delivery consistency and maintainability. Integrated AI-assisted development workflows to improve development speed, stability, and engineering efficiency while continuing to expand technical expertise across evolving technologies and business requirements.</p>
+
+        <h3 class="metrics-title">Key Metrics</h3>
+        <ul>
+          <li>Helped scale a startup B2B SaaS Platform from 1 - 40+ enterprise customers, supporting 60,000+ users.</li>
+          <li>Solely architected and developed a fully configurable order assignment system, replacing hard-coded business logic and enabling customer-specific workflow automation with significant operational efficiency gains.</li>
+          <li>Developed a complex payment gateway integration with customer-specific compliance and operational requirements, helping secure full onboarding of customer order volume into the platform.</li>
+          <li>Led a full refactor of a complex legacy invoicing system, improving billing accuracy, maintainability, operational confidence, and long-term extensibility through clearer system architecture and code organization.</li>
+          <li>Served as a key stakeholder in the redesign of core application workflows to support customer-configurable operational processes and scalable platform growth.</li>
+          <li>Awarded the company-wide “Award of Excellence” - 2024 for dedication, contribution, and bringing immense value to the company.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div class="job-title">SkyWest Airlines – Airline Pilot - Salt Lake City, UT</div>
+          <div class="job-dates">October 2017 to August 2021</div>
+        </div>
+        <p>Operated regional airline flights on behalf of Delta Air Lines, United Airlines, American Airlines, and Alaska Airlines throughout the United States and Canada while working in highly regulated, high-accountability environments. Executed complex operational procedures with strong emphasis on safety, communication, and operational efficiency. Developed strong real-time problem-solving, operational decision-making, and collaboration skills while coordinating closely with dispatch, scheduling, and crew teams. Adapted quickly to changing operational conditions, mitigated delays and disruptions, and maintained disciplined attention to detail in fast-paced and high-pressure situations.</p>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div class="job-title">Utah Valley University – Certified Flight Instructor - Provo, UT</div>
+          <div class="job-dates">May 2016 to October 2017</div>
+        </div>
+        <p>Instructed aviation students in complex safety-critical procedures and curriculum requirements while helping them obtain pilot certificates and ratings. Developed strong leadership, communication, and mentorship skills while adapting instruction to individual learning styles in a highly structured and detail-oriented training environment.</p>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div class="job-title">Walmart Pharmacy – Pharmacy Technician - Cedar Hills, UT</div>
+          <div class="job-dates">November 2015 to May 2016</div>
+        </div>
+      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <div class="job-title">Walgreens Pharmacy – Pharmacy Technician - Pleasant Grove, UT</div>
+          <div class="job-dates">November 2010 to November 2015</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" aria-labelledby="education-title">
+      <h2 id="education-title" class="section-title"><span class="diamond">⬥</span> Education, Certifications, Activities <span class="diamond">⬥</span></h2>
+
+      <div class="details-grid">
+        <div class="detail-block">
+          <div class="subsection-title">Education</div>
+          <ul class="compact-list">
+            <li>BS Aviation Science, Professional Pilot Emphasis, Utah Valley University, April 2016</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <div class="subsection-title">Certifications</div>
+          <ul class="compact-list">
+            <li>Certificate of Competency in full-stack engineering, Bottega University, December 2021</li>
+            <li>Airline Transport Pilot (ATP), Commercial Pilot</li>
+            <li>Flight Instructor – Airplane Single-engine, Multi-engine, Instrument Airplane</li>
+            <li>CPhT – Certified Pharmacy Technician – DOPL - State and National Certification</li>
+          </ul>
+        </div>
+
+        <div class="detail-block">
+          <div class="subsection-title">Activities</div>
+          <ul class="compact-list">
+            <li>Accomplished musician, professional photographer, web systems and technology, pet parent</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
